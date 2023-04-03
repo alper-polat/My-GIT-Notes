@@ -1,0 +1,83 @@
+# GIT'te versiyonlanmaması gereken,proje içerisinde bazı gereksiz dosyalar mevcuttur.Bu dosyaları versiyonlamak(takip etmek,yönetmek) amaçsızdır.Çünkü zaten üzerlerinde değişiklik yapılmayacaktır.Bundan ötürü versiyonlanmasının gereği yoktur.
+# Bu dosyalar görseller(.png),videolar,paket yöneticisi dosyaları,vsCode'nin kendisine ait halihazırda zaten var olan dosyalar,logolar vs. olabilir.
+# NOT:İlk projeyi açtığımda herhangi bir işlem yapmadan önce ilk olarak .gitignore dosyasını oluşturarak projemde versiyonlanmaması gereken dosyaları belirtebilirim.Tabi bu ciddi projelerde yapılabilir.Önemlidir.
+# Yapmazsam nolur?
+# Başkaları bu projeleri Github'da indirdiğinde resim,video gibi gereksiz dosyaları da indirmiş olur.Ve bu projenin daha fazla alan kapladığı anlamına geliyor.O yüzden bir projeyi Github'a atmadan önce .gitignore dosyasının da içinde olduğundan emin ol.Çalışılan dile/araca özel .gitignore dosyaları araştırılabilir.
+# ÖNEMLİ NOT:Bir dosyayı,dosya uzantılarını vs .gitignore dosyasına eklemek istediğimiz zaman o dosyanın add edilip(takip edilip) commitlenmediğine dikkat etmeliyiz.Eğer o dosya commitlenmişse daha sonra gitignore dosyasına eklesek dahi hala git reposunda takip edilmeye devam edecektir.Eğer eklemek istediğimiz dosya takip edilmişse veya commit edilmişse şu komutu kullanarak önce onu takipten çıkarmalıyız:
+# git rm --cached fileName
+# Peki bu dosyaları nasıl belirleyeceğiz?
+# Örneğin HTML ve CSS ile çalışıyoruz diyelim.İnternette "HTML ve CSS gitignore files" diye aratırsak 
+# .gitignore dosyamıza ekleyeceğimiz dosyaları,dosya uzantılarını görebiliriz.
+# Aşağıda Gİthub'dan alınmış örnek bir HTML,CSS .gitignore dosyası bulunmaktadır.(*.x = x uzantılı dosya)
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+# WebStorm
+*.iml
+
+# Directory-based project format:
+.idea/
+.idea/workspace.xml
+**/.idea/workspace.xml
+
+# mac hidden files
+.DS_Store
+
+##other
+#node_modules/
+#bower_components/
+.tmp
+#.sass-cache
+#builds/**/images/*
+#*.ogg
+#*.mp3
+#*.mp4
+#*.png
+#*.jpeg
+*.psd
+
+*.epub
+*.pdf 
+*.docx
+
+# Bu şekilde versiyonlanmamasını istediğimiz klasörleri da ekleyebiliriz.
+css/
+
+# Direkt dosya ismi verilebilir
+logo.jpeg
+
+#images
+*.jpeg
+*.png
+*.jpg
+
+#videos
+*.mp4
+
+# Proje içerisinde kayıtlı şifreler olabilir.Güvenlik amacıyla buraya eklenebilir.
+password.txt
+
+
