@@ -19,6 +19,7 @@
 _obj
 _test
 
+
 # Architecture specific extensions/prefixes
 *.[568vq]
 [568vq].out
@@ -79,5 +80,5 @@ logo.jpeg
 
 # Proje içerisinde kayıtlı şifreler olabilir.Güvenlik amacıyla buraya eklenebilir.
 password.txt
-
+deneme.txt
 
